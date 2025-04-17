@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -47,6 +47,15 @@ const ShowReactName = reactNameChange[reactRandomName(3)];
 function App() {
   const [count, setCount] = useState(0)
   const [topic, setTopic] = useState('components')
+  
+// how to use useeffect 
+useEffect( () => {
+  // first 
+  return () =>{
+    // second
+  }
+
+},[])
 
   // console.log(reactRandomName(4));
 
@@ -103,6 +112,8 @@ function App() {
         <div className="tab-content">
           <h3>{Topic[topic].title}</h3>
           <p>{Topic[topic].description}</p>
+
+          <button onClick={ () => setCount((count) => count + 1 )  }>recount {count}</button>
         </div>
       </section>
     </>
