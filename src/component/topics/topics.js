@@ -1,4 +1,4 @@
-import { jsx } from "react/jsx-runtime";
+
 
 
 export let Topic = {
@@ -34,5 +34,4 @@ export let Topic = {
             </body>
             </html> `,
     }
-
 }
