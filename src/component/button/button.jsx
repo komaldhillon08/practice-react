@@ -8,12 +8,12 @@
     );
 }
  */
-export const Buttons = ({children , onSelect}) => {
-    return (
-        <>
-        <li className="btn">
-            <button onClick={onSelect}>{children}</button>    
-        </li>
-        </>
-    );
-}
+    export const Buttons = ({children , onSelect}) => {
+        return (
+            <>
+            <li className="btn">
+                <button onClick={onSelect}>{children}</button>    
+            </li>
+            </>
+        );
+    }
