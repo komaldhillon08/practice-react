@@ -47,15 +47,15 @@ const ShowReactName = reactNameChange[reactRandomName(3)];
 function App() {
   const [count, setCount] = useState(0)
   const [topic, setTopic] = useState('components')
-  
-// how to use useeffect 
-useEffect( () => {
-  // first 
-  return () =>{
-    // second
-  }
 
-},[])
+  // how to use useeffect 
+  useEffect(() => {
+    // first 
+    return () => {
+      // second
+    }
+
+  }, [])
 
   // console.log(reactRandomName(4));
 
@@ -100,8 +100,8 @@ useEffect( () => {
         <menu>
           <ul className='list'>
             {/*   <Buttons text={"conponents"} />
-      <Buttons text={"jsx"} />
-      <Buttons text={"html"} /> */}
+            <Buttons text={"jsx"} />
+            <Buttons text={"html"} /> */}
 
             <Buttons onSelect={() => { clickButtonShowInfo("components") }}>component</Buttons>
             <Buttons onSelect={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
@@ -113,7 +113,7 @@ useEffect( () => {
           <h3>{Topic[topic].title}</h3>
           <p>{Topic[topic].description}</p>
 
-          <button onClick={ () => setCount((count) => count + 1 )  }>recount {count}</button>
+          <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
         </div>
       </section>
     </>
