@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 //create the btn with using the components 
 import { Buttons } from './button/button.jsx'
 // topic file add and i click the button the show some content 
@@ -19,10 +19,7 @@ export default function Examples() {
         // console.log("cheche the function " , setTopic);
     }
     // console.log("check the selectTopic>>>>>>>>>>>>>>>",clickButtonShowInfo);
-
-
     // console.log(reactRandomName(4));
-
     // click function in button and  then something information showing 
     let buttonContent = <p>select the topic</p>
 
@@ -36,10 +33,6 @@ export default function Examples() {
             </div>
         );
     }
-
-
-
-
     return (
         // <Section title={"examples"} id="examples" className="examples">
         <Section title="examples" id="examples" className="examples">
@@ -87,8 +80,6 @@ export default function Examples() {
                     */}
                 </>
               }>
-
-
             </Tabs>
             {buttonContent}
         </Section>
