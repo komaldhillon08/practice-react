@@ -1,5 +1,10 @@
+import reactLogo from '../../assets/react.svg'
+import viteLogo from '../../../public/vite.svg'
 
-
+export const CORE_CONCEPTS = [
+    { Image: viteLogo },
+    { Image: reactLogo }
+];
 
 export let Topic = {
     components: {

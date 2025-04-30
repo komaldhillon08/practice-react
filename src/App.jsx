@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+
+
 
 // header iumg componnents 
 import HeaderImg from './component/header/header.jsx'
+import { CORE_CONCEPTS } from './component/topics/topics.js'
+
 
 //create the btn with using the components 
 import { Buttons } from './component/button/button.jsx'
@@ -22,8 +24,6 @@ function reactRandomName(max) {
   return Math.floor(Math.random() * (max + 1));
 }
 const ShowReactName = reactNameChange[reactRandomName(3)];
-
-
 
 // create the new function 
 /* function ShowReactImg() {
@@ -92,8 +92,19 @@ function App() {
 
 
         {/* this code is using the object type and props*/}
-        <HeaderImg viteLogo={viteLogo} reactLogo={reactLogo} />
+        {/* <HeaderImg img1={viteLogo} img={reactLogo} /> */}
+        
 
+
+    {CORE_CONCEPTS.map((conceptItem, index) => (
+        <HeaderImg
+        key={index}
+        img={conceptItem.Image}
+      />
+    ))}
+
+
+      
 
       </div>
       <h1>Vite + React</h1>
