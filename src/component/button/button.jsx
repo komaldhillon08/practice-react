@@ -8,11 +8,11 @@
     );
 }
  */
-export const Buttons = ({ children, onSelect }) => {
+export const Buttons = ({ children, onSelect , selectTopic}) => {
     return (
         <>
             <li className="btn">
-                <button onClick={onSelect}>{children}</button>
+                <button className={selectTopic} onClick={onSelect}>{children}</button>
             </li>
         </>
     );

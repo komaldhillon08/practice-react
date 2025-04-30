@@ -46,7 +46,7 @@ const ShowReactName = reactNameChange[reactRandomName(3)];
 
 function App() {
   const [count, setCount] = useState(0)
-  const [topic, setTopic] = useState('components')
+  const [selectTopic, setTopic] = useState()
 
   // how to use useeffect 
   useEffect(() => {
@@ -69,6 +69,19 @@ function App() {
     setTopic(buttonInformation)
     // console.log("cheche the function " , setTopic);
 
+  }
+
+
+  let buttonContent = <p>select the topic</p>
+  if (selectTopic) {
+    buttonContent = (
+      <div className="tab-content">
+            <h3>{Topic[selectTopic].title}</h3>
+            <p>{Topic[selectTopic].description}</p>
+
+            <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
+          </div>
+    );
   }
 
 
@@ -103,18 +116,40 @@ function App() {
             <Buttons text={"jsx"} />
             <Buttons text={"html"} /> */}
 
-            <Buttons onSelect={() => { clickButtonShowInfo("components") }}>component</Buttons>
+            <Buttons selectTopic={selectTopic === "components"} onSelect={() => { clickButtonShowInfo("components") }}>component</Buttons>
             <Buttons onSelect={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
             <Buttons onSelect={() => { clickButtonShowInfo("html") }}>html</Buttons>
 
           </ul>
         </menu>
-        <div className="tab-content">
-          <h3>{Topic[topic].title}</h3>
-          <p>{Topic[topic].description}</p>
+        {/*   <div className="tab-content">
+          <h3>{Topic[selectTopic].title}</h3>
+          <p>{Topic[selectTopic].description}</p>
 
           <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
         </div>
+         */}
+
+      {/*   {!selectTopic ? (<p>Please select the topics</p>) : (
+          <div className="tab-content">
+            <h3>{Topic[selectTopic].title}</h3>
+            <p>{Topic[selectTopic].description}</p>
+
+            <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
+          </div>
+        )} */}
+
+       {/*  {!selectTopic &&  <p>Please select the topics</p> }
+        {selectTopic && (
+          <div className="tab-content">
+          <h3>{Topic[selectTopic].title}</h3>
+          <p>{Topic[selectTopic].description}</p>
+
+          <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
+        </div>
+        )}
+ */}
+      {buttonContent}
       </section>
     </>
   )
