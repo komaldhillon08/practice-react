@@ -36,7 +36,10 @@ export default function Examples() {
     return (
         // <Section title={"examples"} id="examples" className="examples">
         <Section title="examples" id="examples" className="examples">
-            <Tabs button={
+            <Tabs 
+                buttonContainer="div"
+            
+            button={
                 <>
                     {/* <h2>examples</h2> */}
                     <menu className='btn'>
