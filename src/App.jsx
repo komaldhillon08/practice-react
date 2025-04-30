@@ -2,14 +2,9 @@ import { useEffect, useState } from 'react'
 import './App.css'
 // add logo file in componenet folder 
 import Logos from './component/logos.jsx'
-
 import './component/button/button.css'
 // add the example file in component folder
 import Examples from './component/examples.jsx'
-
-
-
-
 // add multiple names 
 const reactNameChange = ["komal", "preet", "singh", "dhilon"]
 function reactRandomName(max) {
@@ -43,14 +38,10 @@ function App() {
 
   }, [])
 
-  // console.log(reactRandomName(4));
-
-  // click function in button and  then something information showing 
   return (
     <>
       <main>
         <Logos />
-
         <h1>Vite + React</h1>
         <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>
@@ -63,13 +54,9 @@ function App() {
         <p className="read-the-docs">
           {ShowReactName} Click on the Vite and React logos to learn more
         </p>
-
         <Examples />
-
       </main>
-
     </>
   )
 }
-
 export default App

@@ -5,50 +5,52 @@ import { Buttons } from './button/button.jsx'
 import { Topic } from './topics/topics.js'
 
 export default function Examples() {
-  const [selectTopic, setTopic] = useState()
+    const [selectTopic, setTopic] = useState()
 
 
-  function clickButtonShowInfo(buttonInformation) {
-    console.log(buttonInformation);
-    setTopic(buttonInformation)
-    // console.log("cheche the function " , setTopic);
-  }
-  // console.log("check the selectTopic>>>>>>>>>>>>>>>",clickButtonShowInfo);
+    function clickButtonShowInfo(buttonInformation) {
+        console.log(buttonInformation);
+        setTopic(buttonInformation)
+        // console.log("cheche the function " , setTopic);
+    }
+    // console.log("check the selectTopic>>>>>>>>>>>>>>>",clickButtonShowInfo);
 
 
+    // console.log(reactRandomName(4));
 
-  let buttonContent = <p>select the topic</p>
+    // click function in button and  then something information showing 
+    let buttonContent = <p>select the topic</p>
 
-  if (selectTopic) {
-    buttonContent = (
-      <div className="tab-content">
-        <h3>{Topic[selectTopic].title}</h3>
-        <p>{Topic[selectTopic].description}</p>
+    if (selectTopic) {
+        buttonContent = (
+            <div className="tab-content">
+                <h3>{Topic[selectTopic].title}</h3>
+                <p>{Topic[selectTopic].description}</p>
 
-        {/* <button onClick={() => setCount((count) => count + 1)}>recount {count}</button> */}
-      </div>
-    );
-  }
+                {/* <button onClick={() => setCount((count) => count + 1)}>recount {count}</button> */}
+            </div>
+        );
+    }
 
 
 
 
     return (
         <section className='examples'>
-        <h2>examples</h2>
-        <menu className='btn'>
-          <ul className='list'>
-            {/*   <Buttons text={"conponents"} />
+            <h2>examples</h2>
+            <menu className='btn'>
+                <ul className='list'>
+                    {/*   <Buttons text={"conponents"} />
             <Buttons text={"jsx"} />
             <Buttons text={"html"} /> */}
 
-            <Buttons /* selectTopic={selectTopic === "components"}  */ onSelect={() => { clickButtonShowInfo("components") }}>component</Buttons>
-            <Buttons onSelect={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
-            <Buttons onSelect={() => { clickButtonShowInfo("html") }}>html</Buttons>
+                    <Buttons /* selectTopic={selectTopic === "components"}  */ onSelect={() => { clickButtonShowInfo("components") }}>component</Buttons>
+                    <Buttons onSelect={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
+                    <Buttons onSelect={() => { clickButtonShowInfo("html") }}>html</Buttons>
 
-          </ul>
-        </menu>
-        {/*   <div className="tab-content">
+                </ul>
+            </menu>
+            {/*   <div className="tab-content">
           <h3>{Topic[selectTopic].title}</h3>
           <p>{Topic[selectTopic].description}</p>
 
@@ -56,7 +58,7 @@ export default function Examples() {
         </div>
          */}
 
-        {/*   {!selectTopic ? (<p>Please select the topics</p>) : (
+            {/*   {!selectTopic ? (<p>Please select the topics</p>) : (
           <div className="tab-content">
             <h3>{Topic[selectTopic].title}</h3>
             <p>{Topic[selectTopic].description}</p>
@@ -65,7 +67,7 @@ export default function Examples() {
           </div>
         )} */}
 
-        {/*  {!selectTopic &&  <p>Please select the topics</p> }
+            {/*  {!selectTopic &&  <p>Please select the topics</p> }
           {selectTopic && (
             <div className="tab-content">
             <h3>{Topic[selectTopic].title}</h3>
@@ -75,7 +77,7 @@ export default function Examples() {
           </div>
           )}
         */}
-        {buttonContent}
-      </section>
+            {buttonContent}
+        </section>
     );
 }
