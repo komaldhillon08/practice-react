@@ -62,17 +62,16 @@ function App() {
   // click function in button and  then something information showing 
 
   function clickButtonShowInfo(buttonInformation) {
-
-    // console.log(buttonInformation);
-
-
+    console.log(buttonInformation);
     setTopic(buttonInformation)
     // console.log("cheche the function " , setTopic);
-
   }
+  // console.log("check the selectTopic>>>>>>>>>>>>>>>",clickButtonShowInfo);
+
 
 
   let buttonContent = <p>select the topic</p>
+
   if (selectTopic) {
     buttonContent = (
       <div className="tab-content">
@@ -83,6 +82,7 @@ function App() {
           </div>
     );
   }
+  
 
 
   return (
@@ -116,7 +116,7 @@ function App() {
             <Buttons text={"jsx"} />
             <Buttons text={"html"} /> */}
 
-            <Buttons selectTopic={selectTopic === "components"} onSelect={() => { clickButtonShowInfo("components") }}>component</Buttons>
+            <Buttons /* selectTopic={selectTopic === "components"}  */onSelect={() => { clickButtonShowInfo("components") }}>component</Buttons>
             <Buttons onSelect={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
             <Buttons onSelect={() => { clickButtonShowInfo("html") }}>html</Buttons>
 

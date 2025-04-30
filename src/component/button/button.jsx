@@ -12,7 +12,7 @@ export const Buttons = ({ children, onSelect , selectTopic}) => {
     return (
         <>
             <li className="btn">
-                <button className={selectTopic} onClick={onSelect}>{children}</button>
+                <button /* className={selectTopic} */ onClick={onSelect}>{children}</button>
             </li>
         </>
     );
