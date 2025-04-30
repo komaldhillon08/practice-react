@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react';
 import { Buttons } from './button/button.jsx'
 // topic file add and i click the button the show some content 
 import { Topic } from './topics/topics.js'
+// import section file 
+import Section from './Section.jsx';
+
 
 export default function Examples() {
     const [selectTopic, setTopic] = useState()
@@ -36,17 +39,19 @@ export default function Examples() {
 
 
     return (
-        <section className='examples'>
-            <h2>examples</h2>
+        // <Section title={"examples"} id="examples" className="examples">
+        <Section title="examples" id="examples" className="examples">
+
+            {/* <h2>examples</h2> */}
             <menu className='btn'>
                 <ul className='list'>
                     {/*   <Buttons text={"conponents"} />
             <Buttons text={"jsx"} />
             <Buttons text={"html"} /> */}
 
-                    <Buttons /* selectTopic={selectTopic === "components"}  */ onSelect={() => { clickButtonShowInfo("components") }}>component</Buttons>
-                    <Buttons onSelect={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
-                    <Buttons onSelect={() => { clickButtonShowInfo("html") }}>html</Buttons>
+                    <Buttons /* selectTopic={selectTopic === "components"}  */ onClick={() => { clickButtonShowInfo("components") }}>component</Buttons>
+                    <Buttons onClick={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
+                    <Buttons onClick={() => { clickButtonShowInfo("html") }}>html</Buttons>
 
                 </ul>
             </menu>
@@ -78,6 +83,6 @@ export default function Examples() {
           )}
         */}
             {buttonContent}
-        </section>
+        </Section>
     );
 }
