@@ -5,6 +5,8 @@ import { Buttons } from './button/button.jsx'
 import { Topic } from './topics/topics.js'
 // import section file 
 import Section from './Section.jsx';
+// import tabs file 
+import Tabs from './Tabs.jsx';
 
 
 export default function Examples() {
@@ -41,47 +43,53 @@ export default function Examples() {
     return (
         // <Section title={"examples"} id="examples" className="examples">
         <Section title="examples" id="examples" className="examples">
+            <Tabs button={
+                <>
+                    {/* <h2>examples</h2> */}
+                    <menu className='btn'>
+                        <ul className='list'>
+                            {/*   <Buttons text={"conponents"} />
+                            <Buttons text={"jsx"} />
+                            <Buttons text={"html"} /> */}
 
-            {/* <h2>examples</h2> */}
-            <menu className='btn'>
-                <ul className='list'>
-                    {/*   <Buttons text={"conponents"} />
-            <Buttons text={"jsx"} />
-            <Buttons text={"html"} /> */}
+                            <Buttons /* selectTopic={selectTopic === "components"}  */ onClick={() => { clickButtonShowInfo("components") }}>component</Buttons>
+                            <Buttons onClick={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
+                            <Buttons onClick={() => { clickButtonShowInfo("html") }}>html</Buttons>
 
-                    <Buttons /* selectTopic={selectTopic === "components"}  */ onClick={() => { clickButtonShowInfo("components") }}>component</Buttons>
-                    <Buttons onClick={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
-                    <Buttons onClick={() => { clickButtonShowInfo("html") }}>html</Buttons>
+                        </ul>
+                    </menu>
+                    {/*   <div className="tab-content">
+                    <h3>{Topic[selectTopic].title}</h3>
+                    <p>{Topic[selectTopic].description}</p>
 
-                </ul>
-            </menu>
-            {/*   <div className="tab-content">
-          <h3>{Topic[selectTopic].title}</h3>
-          <p>{Topic[selectTopic].description}</p>
+                    <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
+                    </div>
+                    */}
 
-          <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
-        </div>
-         */}
+                    {/*   {!selectTopic ? (<p>Please select the topics</p>) : (
+                        <div className="tab-content">
+                        <h3>{Topic[selectTopic].title}</h3>
+                        <p>{Topic[selectTopic].description}</p>
 
-            {/*   {!selectTopic ? (<p>Please select the topics</p>) : (
-          <div className="tab-content">
-            <h3>{Topic[selectTopic].title}</h3>
-            <p>{Topic[selectTopic].description}</p>
+                        <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
+                        </div>
+                     )} */}
 
-            <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
-          </div>
-        )} */}
+                    {/*  {!selectTopic &&  <p>Please select the topics</p> }
+                    {selectTopic && (
+                        <div className="tab-content">
+                        <h3>{Topic[selectTopic].title}</h3>
+                        <p>{Topic[selectTopic].description}</p>
 
-            {/*  {!selectTopic &&  <p>Please select the topics</p> }
-          {selectTopic && (
-            <div className="tab-content">
-            <h3>{Topic[selectTopic].title}</h3>
-            <p>{Topic[selectTopic].description}</p>
+                        <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
+                    </div>
+                    )}
+                    */}
+                </>
+              }>
 
-            <button onClick={() => setCount((count) => count + 1)}>recount {count}</button>
-          </div>
-          )}
-        */}
+
+            </Tabs>
             {buttonContent}
         </Section>
     );
