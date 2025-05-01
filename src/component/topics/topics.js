@@ -3,6 +3,7 @@ import viteLogo from '../../../public/vite.svg'
 
 export const CORE_CONCEPTS = [
     { Image: viteLogo },
+    { Image: reactLogo },
     { Image: reactLogo }
 ];
 
