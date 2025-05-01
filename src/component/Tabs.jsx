@@ -7,13 +7,13 @@
     </>
 } */
 
-    export default function Tabs({ children , button , buttonContainer }) {
-        const ButtonContainer = buttonContainer; 
-        return <>
-            <ButtonContainer>
+export default function Tabs({ children, button, buttonContainer }) {
+    const ButtonContainer = buttonContainer;
+    return <>
+        <ButtonContainer>
             {button}
-    
-            </ButtonContainer>
-            {children}
-        </>
-    }
+
+        </ButtonContainer>
+        {children}
+    </>
+}

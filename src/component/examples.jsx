@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 //create the btn with using the components 
 import { Buttons } from './button/button.jsx'
 // topic file add and i click the button the show some content 
@@ -36,25 +36,25 @@ export default function Examples() {
     return (
         // <Section title={"examples"} id="examples" className="examples">
         <Section title="examples" id="examples" className="examples">
-            <Tabs 
+            <Tabs
                 buttonContainer="div"
-            
-            button={
-                <>
-                    {/* <h2>examples</h2> */}
-                    <menu className='btn'>
-                        <ul className='list'>
-                            {/*   <Buttons text={"conponents"} />
+
+                button={
+                    <>
+                        {/* <h2>examples</h2> */}
+                        <menu className='btn'>
+                            <ul className='list'>
+                                {/*   <Buttons text={"conponents"} />
                             <Buttons text={"jsx"} />
                             <Buttons text={"html"} /> */}
 
-                            <Buttons /* selectTopic={selectTopic === "components"}  */ onClick={() => { clickButtonShowInfo("components") }}>component</Buttons>
-                            <Buttons onClick={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
-                            <Buttons onClick={() => { clickButtonShowInfo("html") }}>html</Buttons>
+                                <Buttons /* selectTopic={selectTopic === "components"}  */ onClick={() => { clickButtonShowInfo("components") }}>component</Buttons>
+                                <Buttons onClick={() => { clickButtonShowInfo("jsx") }}>jsx</Buttons>
+                                <Buttons onClick={() => { clickButtonShowInfo("html") }}>html</Buttons>
 
-                        </ul>
-                    </menu>
-                    {/*   <div className="tab-content">
+                            </ul>
+                        </menu>
+                        {/*   <div className="tab-content">
                     <h3>{Topic[selectTopic].title}</h3>
                     <p>{Topic[selectTopic].description}</p>
 
@@ -62,7 +62,7 @@ export default function Examples() {
                     </div>
                     */}
 
-                    {/*   {!selectTopic ? (<p>Please select the topics</p>) : (
+                        {/*   {!selectTopic ? (<p>Please select the topics</p>) : (
                         <div className="tab-content">
                         <h3>{Topic[selectTopic].title}</h3>
                         <p>{Topic[selectTopic].description}</p>
@@ -71,7 +71,7 @@ export default function Examples() {
                         </div>
                      )} */}
 
-                    {/*  {!selectTopic &&  <p>Please select the topics</p> }
+                        {/*  {!selectTopic &&  <p>Please select the topics</p> }
                     {selectTopic && (
                         <div className="tab-content">
                         <h3>{Topic[selectTopic].title}</h3>
@@ -81,8 +81,8 @@ export default function Examples() {
                     </div>
                     )}
                     */}
-                </>
-              }>
+                    </>
+                }>
             </Tabs>
             {buttonContent}
         </Section>

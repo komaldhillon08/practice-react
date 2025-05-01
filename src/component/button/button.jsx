@@ -18,11 +18,11 @@
     );
 }
  */
-export const Buttons = ({ children , selectTopic , ...props}) => {
+export const Buttons = ({ children, selectTopic, ...props }) => {
     return (
         <>
             <li className="btn">
-                <button  className={selectTopic ? 'active' : undefined}  {...props}>
+                <button className={selectTopic ? 'active' : undefined}  {...props}>
                     {children}
                 </button>
             </li>
